@@ -16,7 +16,7 @@ source ~/catkin_ws/devel/setup.bash
 ```
 ## 3. Demo
 
-We evaluate the proposed method quantitatively on the [Event Camera Dataset](http://rpg.ifi.uzh.ch/davis_data.html). This demo takes the dynamic_6dof sequence as example.
+We evaluate the proposed method quantitatively on the [Event Camera Dataset](http://rpg.ifi.uzh.ch/davis_data.html). This demo takes the [dynamic_6dof](http://rpg.ifi.uzh.ch/datasets/davis/dynamic_6dof.bag) sequence as example.
 
 First, start dv_ros. Notice that the event accumulator depends on the timestamp, so when you restart the dataset or davis driver, you should restart dv_ros. 
 ```
