@@ -1,0 +1,10 @@
+<!--
+  Created by kehan on 2021/6/14.
+-->
+<launch>
+  <node pkg="dv_ros" type="dv_ros_node" name="dv_ros_node"
+        required="true"
+        args="$(find dv_ros)/config/davis346.yaml"
+        output="screen">
+  </node>
+</launch>

@@ -1,0 +1,42 @@
+%YAML:1.0
+
+num_of_event_stream: 1
+
+event0_device_type: 0                   # 0: davis, 1: celex
+event0_topic: "/dvs/events"
+event0_frame_width: 346
+event0_frame_height: 260
+event0_accumulated_frame_topic: "/dvs/event_frame"  # accumulated frame topic's name, for publishing
+event0_accumulation_method: 2     # 0: by time, 1: by count, 2: time window is sync with events data hz, by count
+event0_count_window_size: 10000
+event0_time_window_size: 33       # ms
+event0_decay_function: 3          # 0: None, 1: Linear, 2: Exponential, 3: Step
+event0_decay_param: 0.000001       # us
+event0_min_potential: 0
+event0_max_potential: 1
+event0_neutral_potential: 0.5
+event0_event_contribution: 0.33
+event0_rectify_polarity: 0    # enable: 1, disable: 0
+event0_synchronous_decay: 0   # enable: 1, disable: 0
+event0_no_motion_threshold: 3000      # rate: events/s
+# event0_device_type: 0                   # 0: davis, 1: celex
+# event0_topic: "/dvs/events"
+# event0_frame_width: 346
+# event0_frame_height: 260
+# event0_accumulated_frame_topic: "/dvs/event_frame"  # accumulated frame topic's name, for publishing
+# event0_accumulation_method: 0     # 0: by time, 1: by count, 2: time window is sync with events data hz, by count
+# event0_count_window_size: 12000
+# event0_time_window_size: 33       # ms
+# event0_decay_function: 1          # 0: None, 1: Linear, 2: Exponential, 3: Step
+# event0_decay_param: 1000000     # us
+# event0_min_potential: 0
+# event0_max_potential: 0.30000001192092896
+# event0_neutral_potential: 0
+# event0_event_contribution: 0.03999999910593033
+# event0_rectify_polarity: 0    # enable: 1, disable: 0
+# event0_synchronous_decay: 0   # enable: 1, disable: 0
+# event0_no_motion_threshold: 1000      # rate: events/s
+# #knoise
+# event0_use_knoise: 0    # enable: 1, disable: 0
+# event0_knoise_delta_t: 1000    # time delta for filter
+# event0_knoise_supporters: 1    # number of supporting pixels

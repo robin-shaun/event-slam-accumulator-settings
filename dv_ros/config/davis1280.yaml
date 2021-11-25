@@ -1,0 +1,21 @@
+%YAML:1.0
+
+num_of_event_stream: 1
+
+event0_device_type: 0                   # 0: davis, 1: celex
+event0_topic: "/davis/left/events"
+event0_frame_width: 1280
+event0_frame_height: 120
+event0_accumulated_frame_topic: "/davis/left/event_frame"  # accumulated frame topic's name, for publishing
+event0_accumulation_method: 2     # 0: by time, 1: by count, 2: time window is sync with events data hz, by count
+event0_count_window_size: 150000
+event0_time_window_size: 33       # ms
+event0_decay_function: 3          # 0: None, 1: Linear, 2: Exponential, 3: Step
+event0_decay_param: 0.000001       # us
+event0_min_potential: 0
+event0_max_potential: 3
+event0_neutral_potential: 0
+event0_event_contribution: 1
+event0_rectify_polarity: 1    # enable: 1, disable: 0
+event0_synchronous_decay: 0   # enable: 1, disable: 0
+event0_no_motion_threshold: 3000      # rate: events/s

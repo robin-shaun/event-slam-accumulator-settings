@@ -1,0 +1,39 @@
+%YAML:1.0
+
+num_of_event_stream: 2
+
+event0_device_type: 0                   # 0: davis, 1: celex
+event0_topic: "/davis_left/events"
+event0_frame_width: 240
+event0_frame_height: 180
+event0_accumulated_frame_topic: "/davis_left/event_frame"  # accumulated frame topic's name, for publishing
+event0_accumulation_method: 2     # 0: by time, 1: by count, 2: time window is sync with events data hz, by count
+event0_count_window_size: 15000
+event0_time_window_size: 33       # ms
+event0_decay_function: 3          # 0: None, 1: Linear, 2: Exponential, 3: Step
+event0_decay_param: 0.000001       # us
+event0_min_potential: 0
+event0_max_potential: 3
+event0_neutral_potential: 0
+event0_event_contribution: 1
+event0_rectify_polarity: 1    # enable: 1, disable: 0
+event0_synchronous_decay: 0   # enable: 1, disable: 0
+event0_no_motion_threshold: 3000      # rate: events/s
+
+event1_device_type: 0                   # 0: davis, 1: celex
+event1_topic: "/davis_right/events"
+event1_frame_width: 240
+event1_frame_height: 180
+event1_accumulated_frame_topic: "/davis_right/event_frame"  # accumulated frame topic's name, for publishing
+event1_accumulation_method: 2     # 0: by time, 1: by count, 2: time window is sync with events data hz, by count
+event1_count_window_size: 15000
+event1_time_window_size: 33       # ms
+event1_decay_function: 3          # 0: None, 1: Linear, 2: Exponential, 3: Step
+event1_decay_param: 0.000001       # us
+event1_min_potential: 0
+event1_max_potential: 3
+event1_neutral_potential: 0
+event1_event_contribution: 1
+event1_rectify_polarity: 1    # enable: 1, disable: 0
+event1_synchronous_decay: 0   # enable: 1, disable: 0
+event1_no_motion_threshold: 3000      # rate: events/s
