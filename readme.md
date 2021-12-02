@@ -1,6 +1,6 @@
 # Research on Event Accumulator Settings for Event-Based SLAM
 
-This is the source code for paper "Research on Event Accumulator Settings for Event-Based SLAM". For more details please refer to 
+This is the source code for paper "Research on Event Accumulator Settings for Event-Based SLAM". For more details please refer to https://arxiv.org/abs/2112.00427
 
 ## 1. Prerequisites
 See [dv_ros](https://github.com/kehanXue/dv_ros) 
@@ -49,5 +49,5 @@ If you want to compare the event-based VINS Fusion with traditional VINS Fusion 
 
 ## 5. Acknowledgements
 
-Thanks for the wonderful open source VIO system, [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion).
+Thanks for [dv_ros](https://github.com/kehanXue/dv_ros) and [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion).
 

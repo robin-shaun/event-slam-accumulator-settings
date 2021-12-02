@@ -49,6 +49,8 @@ Accumulator::~Accumulator() = default;
 
 void Accumulator::AddNewEvents(dv::EventStore& event_store) {
   if (IsNoMotion(event_store)) {
+    current_frame_time_ = event_store.getHighestTime();
+    PublishFrame(current_frame_time_);
     return;
   }
   if (options_->accumulation_method == AccumulationMethod::BY_TIME ||
@@ -110,14 +112,14 @@ void Accumulator::ElaborateFrame(const dv::EventStore& events) {
       -static_cast<double>(accumulator_.getMinPotential()) * scale_factor;
   frame.convertTo(corrected_frame_, CV_8U, scale_factor, shift_factor);
 
-  PublishFrame();
+  PublishFrame(current_frame_time_);
 }
 
-void Accumulator::PublishFrame() {
+void Accumulator::PublishFrame(uint64_t timestamp) {
   auto frame = cv_bridge::CvImage(std_msgs::Header(),
                                   "mono8",
                                   corrected_frame_).toImageMsg();
-  frame->header.stamp = ros::Time().fromNSec(current_frame_time_);
+  frame->header.stamp = ros::Time().fromNSec(timestamp);
   accumulated_frame_pub_.publish(frame);
 }
 

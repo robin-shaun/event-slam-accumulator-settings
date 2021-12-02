@@ -35,18 +35,18 @@ EventCollector::~EventCollector() = default;
 
 void EventCollector::EventsCallback(
     const dvs_msgs::EventArrayConstPtr& events_msg) {
-  TicToc tic_toc;
-  static long num = 0;
-  static double avg_time = 0;
+  // TicToc tic_toc;
+  // static long num = 0;
+  // static double avg_time = 0;
   ProcessEvents(events_msg);
-  auto current_time_cost = tic_toc.toc();
-  avg_time += current_time_cost;
-  num++;
-  std::cout << "avg time cost: " << avg_time / num << " ms of " << num
-            << " events packet "
-            << "current time cost: " << current_time_cost << "ms "
-            << "current events number: " << events_msg->events.size()
-            << std::endl;
+  // auto current_time_cost = tic_toc.toc();
+  // avg_time += current_time_cost;
+  // num++;
+  // std::cout << "avg time cost: " << avg_time / num << " ms of " << num
+  //           << " events packet "
+  //           << "current time cost: " << current_time_cost << "ms "
+  //           << "current events number: " << events_msg->events.size()
+  //           << std::endl;
 }
 
 void EventCollector::EventsCallback(

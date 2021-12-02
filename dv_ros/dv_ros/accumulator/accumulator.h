@@ -32,7 +32,7 @@ class Accumulator {
   void DoPerEventNumber(const dv::EventStore& events);
   void DoPerAddEventData();
   void ElaborateFrame(const dv::EventStore& events);
-  void PublishFrame();
+  void PublishFrame(uint64_t timestamp);
   bool IsNoMotion(const dv::EventStore& events);
 
   std::shared_ptr<AccumulatorOptions> options_;
