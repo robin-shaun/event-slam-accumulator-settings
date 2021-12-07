@@ -42,7 +42,7 @@ rosbag play dynamic_6dof.bag
 
 ## 4. Run with your devices
 
-We have tested the code with DAVIS240 and DAVIS346. If you want to run with your devices, the most important thing to do is calibrate the event camera and imu. We advise to use [Kalibr](https://github.com/ethz-asl/kalibr) with traditional image from APS and IMU, because the intrinsics and extrinsics are almost the same for APS and DVS.
+We have tested the code with DAVIS240 and DAVIS346. If you want to run with your devices, you should use [rpg_dvs_ros](https://github.com/ethz-asl/kalibr). The most important thing to do is calibrating the event camera and imu. We advise to use [Kalibr](https://github.com/ethz-asl/kalibr) with traditional image from APS and IMU, because the intrinsics and extrinsics are almost the same for APS and DVS.
 
 If you want to compare the event-based VINS Fusion with traditional VINS Fusion with DAVIS346, you should use this code. Because the frame from APS of DAVIS346 sometimes changes the size, we do some modification for VINS-Fusion.  
 
