@@ -58,7 +58,7 @@ We modify [rpg_trajectory_evaluation](https://github.com/uzh-rpg/rpg_trajectory_
 python analyze_trajectory_single.py ../results/boxes_6dof
 ```
 
-## 6. Acknowledgements
+## 7. Acknowledgements
 
 Thanks for [dv_ros](https://github.com/kehanXue/dv_ros) and all the open source projects we use.
 
