@@ -1,0 +1,1 @@
+rosrun ORB_SLAM3 Stereo ~/catkin_ws_tmp/src/ORB_SLAM3/Vocabulary/ORBvoc.txt /home/robin/catkin_ws_tmp/src/ORB_SLAM3/Examples_old/Stereo/rpg_event_camera.yaml true /camera/left/image_raw:=/davis_left/event_frame /camera/right/image_raw:=/davis_right/event_frame 
