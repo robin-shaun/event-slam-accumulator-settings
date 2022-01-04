@@ -48,6 +48,31 @@ If you want to compare the event-based VINS Fusion with traditional VINS Fusion 
 
 ## 5. Run with ORBSLAM3 for Stereo Visual SLAM
 
+Event frame based stereo visual SLAM is not introduced in the paper. We use [ORBSLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) to process the event frames from dv_ros. The result shows that the proposed method performs better than [ESVO](https://github.com/HKUST-Aerial-Robotics/ESVO) by computing absolute trajectory error (RMS, unit: cm), using [evo](https://github.com/MichaelGrupp/evo) .
+
+| Sequence | Proposed | ESVO |
+| :------: | :------: | :--: |
+| monitor  |   1.49   | 3.3  |
+|   bin    |   2.77   | 2.8  |
+|   box    |   3.51   | 5.8  |
+|   desk   |   3.14   | 3.2  |
+
+monitor
+
+<img src="monitor.png" width="500"  />
+
+bin
+
+<img src="bin.png" width="500"  />
+
+box
+
+<img src="box.png" width="500"  />
+
+desk
+
+<img src="desk.png" width="500"  />
+
 First compile ORBSLAM3 with ROS according to [this](ORB_SLAM3/README.md). And then you can use this [script](ORB_SLAM3/davis240_run_orbslam_stereo.sh) to run ORBSLAM3, which subscribes event frames and publish estimated poses.
 
 <img src="orbslam3.gif" width="640"  />
