@@ -11,7 +11,7 @@ See [dv_ros](https://github.com/kehanXue/dv_ros)
 cd ~/catkin_ws/src
 git clone https://github.com/robin-shaun/event-slam-accumulator-settings.git
 cd ../
-catkin_make 
+catkin_make # or catkin build
 source ~/catkin_ws/devel/setup.bash
 ```
 ## 3. Demo
@@ -46,8 +46,19 @@ We have tested the code with DAVIS240 and DAVIS346. If you want to run with your
 
 If you want to compare the event-based VINS Fusion with traditional VINS Fusion with DAVIS346, you should use this code. Because the frame from APS of DAVIS346 sometimes changes the size, we do some modification for VINS-Fusion.  
 
+## 5. Run with ORBSLAM3 for Stereo Visual SLAM
 
-## 5. Acknowledgements
+First compile ORBSLAM3 with ROS according to [this](ORB_SLAM3/README.md). And then you can use this [script](ORB_SLAM3/davis240_run_orbslam_stereo.sh) to run ORBSLAM3, which subscribes event frames and publish estimated poses.
 
-Thanks for [dv_ros](https://github.com/kehanXue/dv_ros) and [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion).
+## 6. Evalute results
+
+We modify [rpg_trajectory_evaluation](https://github.com/uzh-rpg/rpg_trajectory_evaluation) to print mean position error and mean yaw error in the terminal. You can evalute results like this
+
+```
+python analyze_trajectory_single.py ../results/boxes_6dof
+```
+
+## 6. Acknowledgements
+
+Thanks for [dv_ros](https://github.com/kehanXue/dv_ros) and all the open source projects we use.
 
