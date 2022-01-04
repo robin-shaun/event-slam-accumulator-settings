@@ -38,7 +38,7 @@ Finally, play the rosbag
 cd ~/catkin_ws/src/event-slam-accumulator-settings/dataset
 rosbag play dynamic_6dof.bag
 ```
-<img src="dynamic_6dof.gif" width="640"  />
+<img src="vins.gif" width="640"  />
 
 ## 4. Run with your devices
 
@@ -49,6 +49,8 @@ If you want to compare the event-based VINS Fusion with traditional VINS Fusion 
 ## 5. Run with ORBSLAM3 for Stereo Visual SLAM
 
 First compile ORBSLAM3 with ROS according to [this](ORB_SLAM3/README.md). And then you can use this [script](ORB_SLAM3/davis240_run_orbslam_stereo.sh) to run ORBSLAM3, which subscribes event frames and publish estimated poses.
+
+<img src="orbslam3.gif" width="640"  />
 
 ## 6. Evalute results
 
