@@ -48,7 +48,7 @@ If you want to compare the event-based VINS Fusion with traditional VINS Fusion 
 
 ## 5. Run with ORBSLAM3 for Stereo Visual SLAM
 
-Event frame based stereo visual SLAM is not introduced in the paper. We use [ORBSLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) to process the event frames from dv_ros. The result shows that the proposed method performs better than [ESVO](https://github.com/HKUST-Aerial-Robotics/ESVO) by computing absolute trajectory error (RMS, unit: cm), using [evo](https://github.com/MichaelGrupp/evo) .
+Event frame based stereo visual SLAM is not introduced in the paper. We use [ORBSLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) to process the event frames from dv_ros. The result shows that the proposed method performs better than [ESVO](https://github.com/HKUST-Aerial-Robotics/ESVO) by computing absolute trajectory error (RMS, unit: cm), using [Python package for the evaluation of odometry and SLAM](https://github.com/MichaelGrupp/evo) .
 
 | Sequence | Proposed | ESVO |
 | :------: | :------: | :--: |
@@ -79,7 +79,7 @@ First compile ORBSLAM3 with ROS according to [this](ORB_SLAM3/README.md). And th
 
 ## 6. Evalute results
 
-We modify [rpg_trajectory_evaluation](https://github.com/uzh-rpg/rpg_trajectory_evaluation) to print mean position error and mean yaw error in the terminal. You can evalute results like this
+We modify [rpg_trajectory_evaluation](https://github.com/uzh-rpg/rpg_trajectory_evaluation) to print mean position error and mean yaw error in the terminal. You can evalute results showed in the paper by
 
 ```
 python analyze_trajectory_single.py ../results/boxes_6dof
