@@ -73,7 +73,7 @@ desk
 
 <img src="desk.png" width="500"  />
 
-First compile ORBSLAM3 with ROS according to [this](ORB_SLAM3/README.md). And then you can use this [script](ORB_SLAM3/davis240_run_orbslam_stereo.sh) to run ORBSLAM3, which subscribes event frames and publish estimated poses.
+First compile ORBSLAM3 with ROS according to [this](ORB_SLAM3/README.md). And then you can use this [script](ORB_SLAM3/davis240_run_orbslam_stereo.sh) to run ORBSLAM3, which subscribes event frames and publish estimated poses (We modify ORBSLAM3 a little to publish estimated poses).
 
 <img src="orbslam3.gif" width="640"  />
 
