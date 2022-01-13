@@ -23,7 +23,7 @@ def extract(bagfile, pose_topic, msg_type, out_filename):
                          msg.pose.pose.orientation.w))
             elif msg_type == "PoseStamped":
                 f.write('%.12f %.12f %.12f %.12f %.12f %.12f %.12f %.12f\n' %
-                        (msg.header.stamp.to_sec() - 1640938382.583813428879 + 1518196212.537011623383,
+                        (msg.header.stamp.to_sec(),
                          msg.pose.position.x, msg.pose.position.y,
                          msg.pose.position.z,
                          msg.pose.orientation.x, msg.pose.orientation.y,
