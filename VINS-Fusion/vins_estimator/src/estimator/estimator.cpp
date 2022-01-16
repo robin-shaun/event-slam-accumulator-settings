@@ -177,12 +177,12 @@ void Estimator::inputImage(double t, const cv::Mat &_img, const cv::Mat &_img1)
     
     if(MULTIPLE_THREAD)  
     {     
-        if(inputImageCnt % 2 == 0)
-        {
+        // if(inputImageCnt % 2 == 0)
+        // {
             mBuf.lock();
             featureBuf.push(make_pair(t, featureFrame));
             mBuf.unlock();
-        }
+        // }
     }
     else
     {

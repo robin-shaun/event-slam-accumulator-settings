@@ -24,19 +24,30 @@ roslaunch dv_ros davis240.launch
 ```
 
 And then, start VINS-Fusion
-```
+``` bash
 roslaunch vins vins_rviz.launch
 ```
-```
+``` bash
 rosrun vins vins_node ~/catkin_ws/src/VINS-Fusion/config/davis/rpg_240_mono_imu_config.yaml
 
-```
+``` 
 
 Finally, play the rosbag
 
-```
+``` bash
 cd ~/catkin_ws/src/event-slam-accumulator-settings/dataset
 rosbag play dynamic_6dof.bag
+```
+
+Notice that the default frequency of VINS-Fusion is the same as the event frame frequency, 30 Hz. If your CPU is not strong enough, maybe you should decrease it to 15 Hz in this [file](VINS-Fusion/vins_estimator/src/estimator/estimator.cpp) by uncommenting the code. However, this will decrease the performance as well.
+
+``` cpp
+        // if(inputImageCnt % 2 == 0)
+        // {
+            mBuf.lock();
+            featureBuf.push(make_pair(t, featureFrame));
+            mBuf.unlock();
+        // }
 ```
 <img src="vins.gif" width="640"  />
 
