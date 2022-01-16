@@ -56,6 +56,7 @@ Event frame based stereo visual SLAM is not introduced in the paper. We use [ORB
 |   bin    |   2.66   | 2.8  |
 |   box    |   3.51   | 5.8  |
 |   desk   |   3.14   | 3.2  |
+
 Event window size: 15000, Event contribution: 0.33
 
 monitor
