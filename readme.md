@@ -48,14 +48,15 @@ If you want to compare the event-based VINS Fusion with traditional VINS Fusion 
 
 ## 5. Run with ORBSLAM3 for Stereo Visual SLAM
 
-Event frame based stereo visual SLAM is not introduced in the paper. We use [ORBSLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) to process the event frames from dv_ros. The result shows that the proposed method performs better than [ESVO](https://github.com/HKUST-Aerial-Robotics/ESVO) by computing absolute trajectory error (RMS, unit: cm), using [Python package for the evaluation of odometry and SLAM](https://github.com/MichaelGrupp/evo) .
+Event frame based stereo visual SLAM is not introduced in the paper. We use [ORBSLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) to process the event frames from dv_ros. The result shows that the proposed method performs better than [ESVO](https://github.com/HKUST-Aerial-Robotics/ESVO) by computing absolute trajectory error (RMS, unit: cm), using [Python package for the evaluation of odometry and SLAM](https://github.com/MichaelGrupp/evo). 
 
 | Sequence | Proposed | ESVO |
 | :------: | :------: | :--: |
 | monitor  |   1.49   | 3.3  |
-|   bin    |   2.77   | 2.8  |
+|   bin    |   2.66   | 2.8  |
 |   box    |   3.51   | 5.8  |
 |   desk   |   3.14   | 3.2  |
+Event window size: 15000, Event contribution: 0.33
 
 monitor
 
