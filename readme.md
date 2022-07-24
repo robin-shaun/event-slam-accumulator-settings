@@ -1,6 +1,10 @@
 # Research on Event Accumulator Settings for Event-Based SLAM
 
-This is the source code for paper "Research on Event Accumulator Settings for Event-Based SLAM". For more details please refer to https://arxiv.org/abs/2112.00427
+This is the source code for paper "Research on Event Accumulator Settings for Event-Based SLAM". For more details, please see the paper
+
+K. Xiao, G. Wang, Y. Chen, Y. Xie, H. Li and S. Li, "Research on Event Accumulator Settings for Event-Based SLAM," 2022 6th International Conference on Robotics, Control and Automation (ICRCA), 2022, pp. 50-56, doi: 10.1109/ICRCA55033.2022.9828933.
+
+ArXiv preprint **[ arXiv:2112.00427](https://arxiv.org/abs/2112.00427)**(2022)
 
 ## 1. Prerequisites
 See [dv_ros](https://github.com/kehanXue/dv_ros) 
@@ -30,7 +34,7 @@ roslaunch vins vins_rviz.launch
 ``` bash
 rosrun vins vins_node ~/catkin_ws/src/VINS-Fusion/config/davis/rpg_240_mono_imu_config.yaml
 
-``` 
+```
 
 Finally, play the rosbag
 
